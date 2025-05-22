@@ -1,0 +1,42 @@
+<div class="calendar-evenimente">
+  <div class="pl-3 pt-3 pr-4 shadow-4">
+    <div class="pl-4">
+      <h2>Events</h2>
+      <br />
+      <div *ngIf="getCurrentEvents().length > 0; else noEvent">
+        <h3>Running Events</h3>
+        <ul>
+          <li *ngFor="let item of getCurrentEvents()">
+            <img
+              [src]="item.icon"
+              alt="{{ item.title }} icon"
+              style="height: 28px; vertical-align: middle; margin-right: 8px"
+            />
+            {{ item.title }} <br />
+            Ends in: {{ calculateRemainingDuration(item) }}
+          </li>
+        </ul>
+      </div>
+      <ng-template #noEvent>
+        <h3>No events running</h3>
+      </ng-template>
+      <div *ngIf="getUpcomingEvents().length > 0">
+        <br />
+        <h3>Upcoming Events</h3>
+        <ul>
+          <div class="pb-5">
+            <li *ngFor="let item of getUpcomingEvents()">
+              <img
+                [src]="item.icon"
+                alt="{{ item.title }} icon"
+                style="height: 28px; vertical-align: middle; margin-right: 8px"
+              />
+              {{ item.title }} <br />
+              Starts in: {{ calculateRemainingTimeUntil(item) }}
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+body, :host {
+    background: #2d2116;
+    
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .main-content {
+    background: rgba(23, 45, 107, 0.7);
+    box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+    color: #fff3d1;
+  }
+  

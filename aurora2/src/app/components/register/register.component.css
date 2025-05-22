@@ -1,0 +1,103 @@
+:host {
+    display: block;
+    color: #b2d48b; 
+  }
+  
+ 
+  
+  h2 {
+    color: #b2d48b; 
+    font-weight: 700;
+  }
+  
+  label {
+    display: block;
+    color: #b2d48b;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background-color: #8d7a5e; 
+    border: 1px solid #5a4a36; 
+    color: #b2d48b; 
+    border-radius: 6px; 
+    width: 100%;
+    padding: 0.75rem 1rem; 
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder {
+    color: #969b8f; 
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    border-color: #e5c79a;
+    box-shadow: 0 0 0 0.2rem rgba(229, 199, 154, 0.25); 
+  }
+  
+  .p-error small, small.p-error { 
+    color: #ff7b7b; 
+    display: block; 
+  }
+  
+  
+  .password-requirements small {
+    display: inline-block; 
+    vertical-align: middle;
+  }
+  
+  .password-requirements .pi {
+    margin-right: 0.5em;
+    font-size: 0.9em;
+  }
+  
+  .hint-default {
+    color: #ffd700;}
+  .hint-default .pi {
+    color: #ffd700;
+  }
+  
+  .hint-valid {
+    color: #32cd32; 
+  }
+  .hint-valid .pi {
+    color: #32cd32;
+  }
+  
+  
+ 
+  button[type="submit"] {
+    background: linear-gradient(90deg, #a13b1b 0%, #7d2c1a 100%);
+    color: #fff3d1;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    width: 100%; 
+    padding: 0.75rem 1rem; /* PrimeFlex p-button-lg or direct padding */
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  button[type="submit"]:hover:not(:disabled) {
+    background: linear-gradient(90deg, #c44d2a 0%, #a13b1b 100%);
+  }
+  
+  button[type="submit"]:disabled {
+    background: #5a4a36;
+    color: #a08b6b;
+    cursor: not-allowed;
+  }
+  
+  .captcha-placeholder > div { 
+    background-color: #3a2718 !important; 
+    border: 1px solid #5a4a36 !important;
+    color: #a08b6b !important; 
+    border-radius: 6px;
+  }

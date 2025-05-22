@@ -1,0 +1,47 @@
+:host{
+    display:block;
+    width:300px;
+}
+li{
+    color:#b2d48b;
+    font-family:'Segoe UI',Arial,sans-serif;
+    font-size:16px;
+    font-weight:400;
+}
+h2{
+    font-size:24px;
+    margin-top: 0px !important;
+    font-weight:600;
+    color:#b2d48b;
+    letter-spacing:1px;
+}
+h3{
+    font-size:20px;
+    font-weight:600;
+    color:#b2d48b;
+    letter-spacing:1px;
+}
+h4{
+    font-size:20px;
+    font-weight:600;
+    color:#b2d48b;
+    letter-spacing:1px;
+}
+ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.calendar-evenimente{
+    background:rgba(23,45,107,0.8);
+    border-radius:8px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.18);
+    color:#b2d48b;
+    font-family:'Segoe UI',Arial,sans-serif;
+}
+.event-box h2{
+    font-size:20px;
+    font-weight:600;
+    color:#b2d48b;
+    letter-spacing:1px;
+}

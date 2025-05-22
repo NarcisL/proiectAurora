@@ -1,0 +1,52 @@
+<div class="registration-container p-p-responsive">
+  <h2 class="p-mb-4">Registration</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="p-fluid">
+
+    <div class="p-field p-mb-3 pb-2" >
+      <div class="pb-2"><label for="username">Username</label></div>  
+      <input id="username" type="text" pInputText formControlName="username" placeholder="Enter username" />
+      <div *ngIf="username?.invalid && (username?.dirty || username?.touched)" class="p-error p-mt-1">
+        <small *ngIf="username?.errors?.['required']">Username is required.</small>
+        <small *ngIf="username?.errors?.['minlength']">Username must be at least 3 characters long.</small>
+      </div>
+    </div>
+
+    <div class="p-field p-mb-3 pb-2">
+      <div class="pb-2"><label for="email">Email</label></div>
+      <input id="email" type="email" pInputText formControlName="email" placeholder="Enter email" />
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="p-error p-mt-1">
+        <small *ngIf="email?.errors?.['required']">Email is required.</small>
+        <small *ngIf="email?.errors?.['email']">Please provide a valid email address.</small>
+      </div>
+    </div>
+
+    <div class="p-field p-mb-3 pb-2">
+      <div class="pb-2"><label for="password">Password</label></div>
+      <input id="password" type="password" pInputText formControlName="password" placeholder="Enter password" />
+      <div class="password-requirements p-mt-2">
+        <small [ngClass]="{'hint-valid': password?.value?.length >= 8 && !password?.errors?.['minlength'], 'hint-default': !(password?.value?.length >= 8 && !password?.errors?.['minlength']) }">
+          <i class="pi" [ngClass]="{'pi-check': password?.value?.length >= 8 && !password?.errors?.['minlength'], 'pi-times': password?.touched && (password?.value?.length < 8 || password?.errors?.['minlength'])}"></i>
+          At least 8 characters
+        </small><br/>
+        <small [ngClass]="{'hint-valid': hasLetter(password?.value) && !password?.errors?.['pattern'], 'hint-default': !(hasLetter(password?.value) && !password?.errors?.['pattern'])}">
+          <i class="pi" [ngClass]="{'pi-check': hasLetter(password?.value) && !password?.errors?.['pattern'], 'pi-times': password?.touched && !(hasLetter(password?.value) || password?.errors?.['pattern'])}"></i>
+          At least 1 letter
+        </small><br/>
+        <small [ngClass]="{'hint-valid': hasNumber(password?.value) && !password?.errors?.['pattern'], 'hint-default': !(hasNumber(password?.value) && !password?.errors?.['pattern'])}">
+          <i class="pi" [ngClass]="{'pi-check': hasNumber(password?.value) && !password?.errors?.['pattern'], 'pi-times': password?.touched && !(hasNumber(password?.value) || password?.errors?.['pattern'])}"></i>
+          At least 1 number
+        </small>
+      </div>
+      <div *ngIf="password?.invalid && (password?.dirty || password?.touched) && (password?.errors?.['required'] || password?.errors?.['minlength'] || password?.errors?.['pattern'])" class="p-error p-mt-1">
+      </div>
+    <div class="p-field p-mb-4 pb-2">
+      <div class="pb-2"><label for="confirmPassword">Confirm password</label></div>
+      <input id="confirmPassword" type="password" pInputText formControlName="confirmPassword" placeholder="Enter password" />
+      <div *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)" class="p-error p-mt-1">
+        <small *ngIf="confirmPassword?.errors?.['required']">Confirm password is required.</small>
+        <small *ngIf="confirmPassword?.errors?.['mustMatch']">Passwords must match.</small>
+      </div>
+    </div>
+
+    <button pButton type="submit" label="Register" [disabled]="registerForm.invalid" class="p-button-lg"></button>
+</div>

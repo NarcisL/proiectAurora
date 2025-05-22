@@ -1,0 +1,21 @@
+<div class="p-d-flex p-jc-center p-ai-start p-mt-6" style="min-height: 90vh;">
+<div class="grid">
+    <div class="col-12">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="col-12 pb-5">
+        <app-title></app-title>
+    </div>
+</div>
+<div class="grid nested-grid w-auto border-round-lg ">
+    <div class="col-2  p-0 pr-6 pl-6">
+        <app-user-interface></app-user-interface>
+        <app-social-links></app-social-links>
+    </div>
+    <div class="col-7 main-content border-round-lg shadow-4">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-2  p-0 pl-6 pr-7">
+        <app-calendar-evenimente></app-calendar-evenimente>
+    </div>    
+</div>

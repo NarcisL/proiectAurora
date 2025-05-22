@@ -1,0 +1,110 @@
+.login-box, .user-pannel {
+  background: rgba(23, 45, 107,0.8);
+  border-radius: 8px;
+  color: #b2d48b;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.login-box h2, .user-pannel h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #b2d48b;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.login-box label,
+.user-pannel .update-email-form label {
+  display: block;
+  font-size: 15px;
+  color: #b2d48b;
+  font-weight: 500;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.user-pannel .update-email-form input[type="text"],
+.user-pannel .update-email-form input[type="email"] {
+  width: 100%;
+  background: #7b6a54;
+  border:  solid #6a5a44;
+  color: #fff3d1;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus,
+.user-pannel .update-email-form input[type="text"]:focus,
+.user-pannel .update-email-form input[type="email"]:focus {
+  background: #8d7a5e;
+  border-color: #a08b6b;
+}
+
+.login-box .btn {
+  width: 100%;
+  background: linear-gradient(90deg, #a13b1b 0%, #7d2c1a 100%);
+  color: #fff3d1;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.login-box .btn:hover {
+  background: linear-gradient(90deg, #c44d2a 0%, #a13b1b 100%);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.user-pannel .user-actions-main button,
+.user-pannel .update-email-form button:not(.p-button-text) {
+  width: 100%;
+  background: linear-gradient(90deg, #8d7a5e 0%, #7b6a54 100%);
+  color: #fff3d1;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: background 0.2s, box-shadow 0.2s;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.user-pannel .user-actions-main button:hover,
+.user-pannel .update-email-form button:not(.p-button-text):hover {
+  background: linear-gradient(90deg, #a08b6b 0%, #8d7a5e 100%);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.user-pannel .update-email-form .p-button-text {
+  width: 100%;
+  background: linear-gradient(90deg, #8d7a5e 0%, #7b6a54 100%);
+  color: #fff3d1;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: background 0.2s, box-shadow 0.2s;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.user-pannel .update-email-form .p-button-text:hover {
+  color: #fff3d1;
+  background: rgba(178, 212, 139, 0.1) !important;
+}
+
+.user-actions-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}

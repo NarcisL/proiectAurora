@@ -1,0 +1,9 @@
+<div>
+    <h3>Latest News</h3>
+    <ul>
+      <li *ngFor="let item of news">
+        <strong>{{ item.title }} </strong> <em>({{ item.date | date:'mediumDate' }})</em>
+        <p>{{ item.content }}</p>
+      </li>
+    </ul>
+  </div>

@@ -1,0 +1,5 @@
+body {
+    background: #172d6b url('/assets/background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
